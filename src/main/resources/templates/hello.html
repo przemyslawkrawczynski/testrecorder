@@ -1,0 +1,79 @@
+﻿﻿
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Streamsoft | Test recordings Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form action="#" method="post" th:action="@{user/add}" th:object="${client}">
+            <div class="container">
+                <div class="row p-1">
+                    <p><b>Zapis decyzji klienta</b></p>
+                </div>
+                <div class="row p-1">
+                    <div class="col-md-12 small  p-3">
+                        <div class="form-row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="name"><b>Imię i nazwisko:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <input type="text" class="form-control text-secondary" id="name" th:field="*{clientName}" th:value="${client.clientName}">
+                            </div>
+                        </div>
+                        <div class="form-row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="pesel"><b>PESEL</b>:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <input type="text" class="form-control text-secondary" id="pesel" th:field="*{pesel}" th:value="${client.pesel}">
+                            </div>
+                        </div>
+                        <div class="form-row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="phone"><b>Numer telefonu:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <input type="text" class="form-control text-secondary" id="phone" th:field="*{phoneNumber}" th:value="${client.phoneNumber}">
+                            </div>
+                        </div>
+                        <div class="form-row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="mail"><b>Adres e-mail:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <input type="email" class="form-control text-secondary" id="mail" th:field="*{mail}" th:value="${client.mail}">
+                            </div>
+                        </div>
+                        <div class="form-row m-1">
+                            <div class="form-group col-md-4 m-1">
+                                <label class="" for="zgoda"><b><u>Krok oferty</u></b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <select id="zgoda" class="form-control" th:field="*{decision}">
+                                    <option th:value="wrong" selected>Wybierz opcję..</option>
+                                    <option th:value="1">Wyraził zgodę na wysyłkę</option>
+                                    <option th:value="2">Nie wyraził zgody na wysyłkę</option>
+                                    <option th:value="3">Klient nie posiada adresu mail</option>
+                                    <option th:value="4">Sprzedano klientowi</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row p-1 m-4 row justify-content-md-left">
+                        <button type="submit" class="btn btn-primary" id="sendButton">Zaznacz decyzję</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

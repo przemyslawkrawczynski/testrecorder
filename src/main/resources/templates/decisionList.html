@@ -1,0 +1,65 @@
+﻿﻿
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Streamsoft | Test recordings Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+            <div class="container">
+                <div class="row p-1">
+                    <p><b>Pomyślnie dodano klienta</b></p>
+                </div>
+                <div class="row p-1">
+                    <div class="col-md-12 small  p-3">
+                        <div class="row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="name"><b>Imię i nazwisko:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <p class="text-secondary" id="name" th:text="${clientDto.clientName}"></p>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="pesel"><b>PESEL</b>:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <p class="text-secondary" id="pesel" th:text="${clientDto.pesel}"></p>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-md-4 m-1">
+                                <p for="phone"><b>Numer telefonu:</b></p>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <p class="text-secondary" id="phone" th:text="${clientDto.phoneNumber}"></p>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-md-4 m-1">
+                                <label for="mail"><b>Adres e-mail:</b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <p class="text-secondary" id="mail"  th:text="${clientDto.mail}"></p>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class=" col-md-4 m-1">
+                                <label class="" for="zgoda"><b><u>Podjęta decyzja</u></b></label>
+                            </div>
+                            <div class="col-md-8 m-1">
+                                <p class="text-secondary" id="zgoda"  th:text="${clientDto.decision}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
