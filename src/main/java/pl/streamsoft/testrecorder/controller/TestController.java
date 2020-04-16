@@ -10,7 +10,7 @@ import pl.streamsoft.testrecorder.pub.dto.ClientDto;
 
 @Controller
 @RequestMapping("/app")
-public class TestController {
+public class TestController implements PubController {
 
     @GetMapping("test")
     public String hello(Model model) {
@@ -25,5 +25,10 @@ public class TestController {
         model.addAttribute("clientDto", client);
         return "decisionList";
     }
+
+    private String show(String one, String two, String three) {
+        return one + " " + two + " " + three;
+    }
+
 
 }
