@@ -1,6 +1,8 @@
 package pl.streamsoft.testrecorder.pub.dto;
 
-public class ClientDto {
+import java.io.Serializable;
+
+public class ClientDto implements Serializable {
 
     private Long id;
     private String clientName;

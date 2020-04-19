@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import pl.streamsoft.testrecorder.ExampleDto;
+import pl.streamsoft.testrecorder.service.impl.ConverterJavaObjectServiceImpl;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -14,10 +15,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ConverterJavaObjectServiceTestSuits {
+public class ConverterJavaObjectServiceImplTestSuits {
 
     @Autowired
-    ConverterJavaObjectService converterService;
+    ConverterJavaObjectServiceImpl converterService;
 
     @Test
     public void should_convert_param_to_object_when_param_is_primitive_class() throws IOException {

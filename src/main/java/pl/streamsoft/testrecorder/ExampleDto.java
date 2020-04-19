@@ -13,4 +13,31 @@ public class ExampleDto implements Serializable {
         this.name = name;
         this.value = value;
     }
+
+    public ExampleDto() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public void setValue(BigDecimal value) {
+        this.value = value;
+    }
 }
